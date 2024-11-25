@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Dark gradient */
+  overflow-x: hidden;
+  color: white; /* Consistent text color */
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); /* Explicit gradient */
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+}
+
+.divider {
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.parallax {
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #282c34, #61dafb);
+  color: white;
+}
+
+.section-alt {
+  padding: 50px 20px;
+  background: linear-gradient(to right, #61dafb, #282c34);
+  color: white;
+}
+
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section_ {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.gradient-divider {
+  height: 50px;
+  background: linear-gradient(to right, #282c34, #61dafb);
+}
+
+.parallax-divider {
+  height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.rounded-section {
+  margin: 10px auto; /* Add spacing between sections */
+  padding: 20px; /* Internal padding */
+  border-radius: 20px; /* Rounded corners */
+  position: relative;
+  background: #0f2027; /* Inner background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.rounded-section::before {
+  content: '';
+  position: absolute;
+  top: -2px; /* Border offset */
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  border-radius: 24px; /* Slightly larger radius to match padding */
+  background: linear-gradient(45deg, #203a43, #203a43); /* Gradient border */
+}
+
+.mask-fade {
+  mask-image: linear-gradient(to bottom, #2c5364 66%, #2c5364 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #2c5364 66%, #2c5364 100%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: top;
+  -webkit-mask-position: top;
+  mask-size: cover;
+  -webkit-mask-size: cover;
+}
