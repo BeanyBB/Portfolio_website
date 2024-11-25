@@ -5,6 +5,7 @@ const Resume = () => {
   const [isInView, setIsInView] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [displayedText, setDisplayedText] = useState('');
+  const [isTranslationComplete, setIsTranslationComplete] = useState(false); // New state
   const fullText = 'Hover to view my Resume!';
   const alienText = 'לראות את קורות החיים של';
   const resumeRef = useRef(null);
@@ -19,6 +20,7 @@ const Resume = () => {
         } else {
           setIsInView(false);
           setDisplayedText(''); // Reset text when out of view
+          setIsTranslationComplete(false); // Reset translation state
         }
       },
       {
@@ -51,6 +53,7 @@ const Resume = () => {
           i++;
         } else {
           clearInterval(interval);
+          setIsTranslationComplete(true); // Mark translation as complete
         }
       }, 100); // Adjust translation speed
       return () => clearInterval(interval);
@@ -58,14 +61,16 @@ const Resume = () => {
   }, [isInView]);
 
   const handleMouseEnter = () => {
-    setIsHovered(true);
+    if (isTranslationComplete) {
+      setIsHovered(true);
 
-    // Automatically scroll the section into view
-    if (resumeRef.current) {
-      resumeRef.current.scrollIntoView({
-        behavior: 'smooth', // Smooth scrolling animation
-        block: 'center', // Centers the section in the viewport
-      });
+      // Automatically scroll the section into view
+      if (resumeRef.current) {
+        resumeRef.current.scrollIntoView({
+          behavior: 'smooth', // Smooth scrolling animation
+          block: 'center', // Centers the section in the viewport
+        });
+      }
     }
   };
 
@@ -122,6 +127,10 @@ const Resume = () => {
 };
 
 export default Resume;
+
+
+
+
 
 
 
