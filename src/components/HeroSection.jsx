@@ -1,6 +1,5 @@
 import React from 'react';
 import forestNightSkyBg from './forest-night-sky-bg.jpg';
-import { motion } from 'framer-motion';
 
 const HeroSection = () => {
   return (

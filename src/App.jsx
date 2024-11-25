@@ -6,7 +6,6 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
-import BlackHoleButton from './components/BlackHoleButton';
 import { motion } from "framer-motion";
 
 function App() {

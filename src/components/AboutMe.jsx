@@ -5,7 +5,6 @@ import moon from './moon.jpg';
 import nelnet from './nelnet.jpg';
 import unl from './unl.jpg';
 import mutual from './mutual.jpg';
-import { motion } from 'framer-motion';
 
 const AboutMe = () => {
   return (
