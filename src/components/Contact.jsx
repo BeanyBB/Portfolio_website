@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import BlackHoleButton from './BlackHoleButton';
 
 const Contact = () => {
   return (
@@ -27,6 +28,7 @@ const Contact = () => {
         >
           Send Message
         </button>
+        <BlackHoleButton/>
       </form>
     </section>
   );
