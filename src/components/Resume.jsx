@@ -81,7 +81,7 @@ const Resume = () => {
       ref={resumeRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`rounded-section mx-4 md:mx-8 p-8 md:p-12 bg-[#002B5B] relative transition-all duration-500 ${
+      className={`rounded-section md:mx-8 md:my-8 bg-[#002B5B] relative transition-all duration-500 ${
         isHovered ? 'h-[900px]' : 'h-[200px]'
       }`}
     >
