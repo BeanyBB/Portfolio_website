@@ -18,7 +18,7 @@ const Projects = () => {
         {
           name: 'Personal Portfolio',
           description: 'Built a portfolio website using React and Tailwind.',
-          link: null, // No link since it's the current site
+          link: 'https://github.com/BeanyBB/Portfolio_website', // Updated link
           isCurrent: true, // Flag to customize this sub-project
         },
         {
@@ -70,9 +70,14 @@ const Projects = () => {
                         {subProject.description}
                       </p>
                       {subProject.isCurrent ? (
-                        <span className="mt-2 inline-block px-3 py-1 bg-green-500 text-white font-medium rounded-md shadow-md">
-                          You're looking at it!
-                        </span>
+                        <a
+                          href={subProject.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-block px-3 py-1 bg-green-500 text-white font-medium rounded-md shadow-md hover:bg-green-600 transition"
+                        >
+                          View on GitHub
+                        </a>
                       ) : (
                         <a
                           href={subProject.link}
@@ -109,6 +114,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
 
 
 
