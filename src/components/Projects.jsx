@@ -8,7 +8,8 @@ const Projects = () => {
       description:
         'A thrilling Python game where players battle enemies using katanas. Built with Pygame for a fast-paced gaming experience.',
       image: katanaKlashImage, // Path to the screenshot
-      link: 'https://github.com/BeanyBB/Katana-Clash', // Replace with a link to download or play your game
+      link: 'https://github.com/BeanyBB/Katana-Clash', // Link to GitHub repository
+      downloadLink: '/Katana-Clash-Dist.zip', // Path to the zip file in the public folder
     },
     {
       name: 'Personal Portfolio & Future ML Project',
@@ -96,14 +97,27 @@ const Projects = () => {
                   ))}
                 </div>
               ) : (
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 bg-green-500 text-white font-medium rounded-lg shadow-md hover:bg-green-600 transition"
-                >
-                  View Project
-                </a>
+                <>
+                  {/* View Project Button */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 bg-green-500 text-white font-medium rounded-lg shadow-md hover:bg-green-600 transition mr-4"
+                  >
+                    View Project
+                  </a>
+                  {/* Download Game Button */}
+                  {project.downloadLink && (
+                    <a
+                      href={project.downloadLink}
+                      download
+                      className="inline-block px-4 py-2 bg-blue-500 text-white font-medium rounded-lg shadow-md hover:bg-blue-600 transition"
+                    >
+                      Download Game
+                    </a>
+                  )}
+                </>
               )}
             </div>
           </div>
@@ -114,6 +128,8 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
 
 
 
