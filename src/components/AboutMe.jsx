@@ -80,10 +80,10 @@ const AboutMe = () => {
 
           {/* Foreground Content */}
           <h3 className="z-10 text-2xl font-bold group-hover:opacity-0 transition-opacity duration-1000">
-            Upcoming Internship
+            Current Internship
           </h3>
           <p className="absolute z-10 inset-0 flex items-center justify-center px-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-            Excited to join Mutual of Omaha this Summer!
+            Working as an Information Service Devloper intern this Summer!
           </p>
 
           {/* Circle with Logo */}
