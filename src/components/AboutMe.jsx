@@ -83,7 +83,7 @@ const AboutMe = () => {
             Current Internship
           </h3>
           <p className="absolute z-10 inset-0 flex items-center justify-center px-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-            Working as an Information Service Devloper intern this Summer!
+            Working as an Information Service Devloper intern for Mutual of Omaha this Summer!
           </p>
 
           {/* Circle with Logo */}
